@@ -16,6 +16,7 @@ $(document).ready(function() {
   // tutte le proprietà dell'oggetto
     for (var key in studente) {
         console.log(key,studente[key]);
+
     }
     //Creare un array di oggetti di studenti
   var studenti = [
@@ -57,10 +58,12 @@ $(document).ready(function() {
    studenti.push(utente);
    console.log(studenti);
    for (var key in studenti) {
-    // $('#elenco').text(studenti[key]);
-    $("#elenco").append(key + ': ' + studenti[key] + ' ');
+
+    $("#elenco").append(studenti[key].nome + " " + studenti[key].cognome + " " + studenti[key].eta+"<br>");
+
    }
 
   })
+
 
 })
