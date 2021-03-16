@@ -37,19 +37,30 @@ $(document).ready(function() {
     }
   // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
   // oggetto studente inserendo nell’ordine: nome, cognome e età.
-  var nome_user = prompt("inserisci il tuo nome");
-  var cognome_user = prompt("inserisci il tuo cognome");
-  var eta_user = prompt("inserisci la tua eta");
 
-  var utente = [
-   {
+
+  // var nome_user = prompt("inserisci il tuo nome");
+  // var cognome_user = prompt("inserisci il tuo cognome");
+  // var eta_user = prompt("inserisci la tua eta");
+  $('#btn').click(function () {
+    var nome_user = $('#nome').val();
+    var cognome_user = $('#cognome').val();
+    var eta_user = $('#eta').val();
+
+
+  var utente = {
     nome: nome_user,
     cognome: cognome_user,
-    eta: eta_user
-   }
-  ];
+    eta: eta_user,
+   };
 
    studenti.push(utente);
    console.log(studenti);
+   for (var key in studenti) {
+    // $('#elenco').text(studenti[key]);
+    $("#elenco").append(key + ': ' + studenti[key] + ' ');
+   }
+
+  })
 
 })

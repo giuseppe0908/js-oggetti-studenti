@@ -4,8 +4,24 @@
     <meta charset="utf-8">
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      body{
+       text-align: center;
+       background-color: yellow;
+      }
+      .form{
+        margin-top: 100px;
+      }
+    </style>
   </head>
   <body>
+    <div class="form">
+      <input id="nome" type="text" name="nome" value="" placeholder="Inserisci il tuo nome">
+      <input id="cognome" type="text" name="cognome" value="" placeholder="Inserisci il tuo cognome">
+      <input id="eta" type="text" name="eta" value="" placeholder="Inserisci la tua età">
+      <button id="btn" type="button" name="button">Invia</button>
+    </div>
+     <p id="elenco"></p>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
